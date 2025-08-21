@@ -5,6 +5,7 @@ OUTDIR=.output
 BUILDDIR=.build
 
 all:
-	mkdir -p $(BUILDDIR) $(OUTDIR)
-	$(TEX) -output-directory=$(OUTDIR) -aux-directory=$(BUILDDIR) $(SRC)
-	mv $(OUTDIR)/main.pdf ./main.pdf
+	(cd src && \
+	mkdir -p $(BUILDDIR) $(OUTDIR) && \
+	$(TEX) -output-directory=$(OUTDIR) -aux-directory=$(BUILDDIR) $(SRC) && \
+	mv $(OUTDIR)/main.pdf ../main.pdf)
