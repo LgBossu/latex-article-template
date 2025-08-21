@@ -4,7 +4,7 @@
             "name": "make",
             "command": "make",
             "args": [],
-            "env": {}
+            "env": {},
         }
     ],
     "latex-workshop.latex.recipes": [
