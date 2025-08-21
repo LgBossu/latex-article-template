@@ -1,8 +1,8 @@
 # Edit variables according to your needs. TEX must match your latex compiler.
 TEX=pdflatex
 SRC=main.tex
-OUTDIR=output
-BUILDDIR=build
+OUTDIR=.output
+BUILDDIR=.build
 
 all:
 	mkdir -p $(BUILDDIR)
