@@ -1,0 +1,53 @@
+\documentclass[a4paper,12pt]{article}
+
+
+% IMPORTS
+\usepackage{import}  % for importing files
+\usepackage{lipsum}
+\import{imports/}{encoding-fonts.tex}
+\import{imports/}{hyperref.tex}
+\import{imports/}{math_base.tex}
+\import{imports/}{page_layout.tex}
+
+\import{imports/}{color-boxes.tex}
+\import{imports/}{math_fancy.tex}
+\import{imports/}{tikz.tex}
+
+% CUSTOM COMMANDS
+\import{imports/}{custom_commands.tex}
+
+\newif\iftodoonotes
+\todoonotestrue % SET TO \todoonotesfalse TO DISABLE TODONOTES
+\import{custom_commands/}{todo_notes.tex}
+\import{custom_commands/}{referencing-aliases.tex}
+\import{custom_commands/}{math_utility.tex}
+\import{custom_commands/}{quantum.tex}
+\import{custom_commands/}{arithmetics.tex}
+\import{custom_commands/}{algebra.tex}
+
+
+% ENVIRONMENT
+\graphicspath{{graphics/}}
+\setcounter{tocdepth}{2}
+\usepackage[english]{babel}
+
+% BIBLIOGRAPHY
+\usepackage[style=nature]{biblatex}
+\addbibresource{refs.bib} % Bibliography file
+
+% DOCUMENT DATA
+\title{TITLE}
+\author{AUTHOR NAME}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\tableofcontents
+
+\include{body.tex}
+\include{bibliography.tex}
+\include{appendix.tex}
+
+\end{document}

@@ -1,0 +1,34 @@
+% Todo notes and main custom commands for recording TODOs in text
+% This script depends on :
+% - package `xargs` imported in `imports/custom_commands.tex`
+
+\iftodoonotes
+    \usepackage[colorinlistoftodos,textsize=tiny]{todonotes} % For todo notes
+\else
+    \usepackage[disable]{todonotes} % Disable todo notes
+\fi
+
+\newcommand{\TODO}[1]{
+  \todo[linecolor=black,backgroundcolor=black!25,bordercolor=black,inline]{
+    TODO: #1}}
+\newcommand{\refneeded}[1][reference needed]{
+  \todo[linecolor=red,backgroundcolor=red!25,bordercolor=red]{
+    reference needed : #1}}
+\newcommand{\checkinfo}[1][check info]{
+  \todo[linecolor=orange,backgroundcolor=orange!25,bordercolor=orange]{
+    check info : #1}}
+\newcommand{\define}[1][define notion]{
+  \todo[linecolor=blue,backgroundcolor=blue!25,bordercolor=blue]{
+    define notion : #1}}
+\newcommand{\develop}[1][develop idea]{
+  \todo[linecolor=cyan,backgroundcolor=cyan!25,bordercolor=cyan]{
+    develop idea : #1}}
+\newcommand{\rephrase}[1][rephrase]{
+  \todo[linecolor=yellow,backgroundcolor=yellow!25,bordercolor=yellow]{
+    rephrase this : #1}}
+\newcommand{\needappendix}[1][add appendix]{
+  \todo[linecolor=green,backgroundcolor=green!25,bordercolor=green]{
+    add appendix : #1}}
+\newcommand{\revise}[1][revise for defense]{
+  \todo[linecolor=purple,backgroundcolor=purple!25,bordercolor=purple]{
+    revise notion for defense : #1}}

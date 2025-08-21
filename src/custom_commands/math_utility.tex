@@ -1,0 +1,8 @@
+% General-purpose math custom commands
+% Depends on:
+% - `amsmath` for \DeclareMathSymbol and \DeclareMathAlphabet, imported in `imports/math_base.tex`
+% - `bbold` for \mathbbb
+\DeclareMathSymbol{\shortminus}{\mathbin}{AMSa}{"39} % Short minus symbol
+\DeclareMathAlphabet{\mathbbb}{U}{bbold}{m}{n} % Blackboard bold font for \mathbbb{1}
+\newcommand{\shortcdot}{\hspace{-3pt}\cdot\hspace{-3pt}} % Dot symbol for multiplication but with shorter spacing
+\newcommand{\Iff}{\mathrel{\text{iff}}} % If and only if symbol
