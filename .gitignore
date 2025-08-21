@@ -1,0 +1,31 @@
+# Build/out directories
+# - Build/out directories must match Makefile variables. default is `build/`, `output/`
+build/
+output/
+
+# Resource directories
+graphics/
+
+# # PDFs such as output files are kept by default for archiving, you may uncomment the line below to exclude them from commits
+# *.pdf
+
+# LaTeX intermediate files
+*.aux
+*.bbl
+*.bbl-*
+*.bcf
+*.bcf-*
+*.blg
+*.fdb_latexmk
+*.fls
+*.lof
+*.log
+*.lot
+*.nav
+*.out
+*.snm
+*.synctex.gz
+*.toc
+*.vrb
+*.xdv
+*.zip
