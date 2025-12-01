@@ -3,6 +3,9 @@
 .build/
 .output/
 
+# Latex extension log files
+*.log
+
 # Resource directories
 graphics/
 
