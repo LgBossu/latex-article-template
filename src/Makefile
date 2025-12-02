@@ -4,9 +4,13 @@
 # Edit variables according to your needs. TEX must match your latex compiler.
 TEX      := latexmk -silent -pdf -interaction=nonstopmode -halt-on-error
 SRC      := main.tex
+
+# Unsafe to change. Stay aware!
 OUTDIR   := .output
 BUILDDIR := .build
+
 LOG      := $(BUILDDIR)/main.log
+
 
 # ANSI colors
 RED    := \033[31m
@@ -33,3 +37,9 @@ all:
 	       exit $$status; }
 	mv $(OUTDIR)/main.pdf ../main.pdf
 	@printf '%b\n' "$(GREEN)$(BOLD)✓ Build succeeded!$(RESET)"
+
+clean:
+	@printf '%b\n' "$(BOLD)⇒ Cleaning build files…$(RESET)"
+	rm .build/*
+	rm .output/*
+	@printf '%b\n' "$(GREEN)$(BOLD)✓ Clean succeeded!$(RESET)"
