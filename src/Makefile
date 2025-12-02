@@ -1,6 +1,6 @@
 # Makefile used by Latex Workshop in automatic builds (VSCode handled)
 # Edit variables according to your needs. TEX must match your latex compiler.
-TEX=latexmk
+TEX=latexmk -pdf -interaction=nonstopmode -halt-on-error
 SRC=main.tex
 OUTDIR=.output
 BUILDDIR=.build
