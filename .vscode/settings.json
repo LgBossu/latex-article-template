@@ -20,4 +20,5 @@
         "Package todonotes .* length marginparwidth is less than .*",
     ],
     "latex-workshop.message.badbox.show": "none",
+    "makefile.configureOnOpen": false,
 }
